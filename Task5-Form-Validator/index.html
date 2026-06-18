@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Registration Form Validator</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f1f3f6; padding: 40px; display: flex; justify-content: center; }
+        .form-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 360px; }
+        .input-group { margin-bottom: 20px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .feedback { font-size: 0.85em; margin-top: 5px; font-weight: 500; }
+        .valid { color: #28a745; }
+        .invalid { color: #dc3545; }
+    </style>
+</head>
+<body>
+    <div class="form-card">
+        <h3>Portal Registration</h3>
+        <form id="registration-form" onsubmit="return false;">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Alphanumeric, 5-15 characters">
+                <div id="username-feedback" class="feedback"></div>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Min 8 chars, 1 upper, 1 digit, 1 special">
+                <div id="password-feedback" class="feedback"></div>
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="+234 followed by 10 digits">
+                <div id="phone-feedback" class="feedback"></div>
+            </div>
+        </form>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
